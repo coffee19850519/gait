@@ -6,20 +6,28 @@
  * @Description: In User Settings Edit
  * @FilePath: \mypapers\Access-Template\readme.md
  -->
-# How to use gait model 
+# How to use gait model
+
+## Requistments
+1. tensorflow-gpu >= 1.10.0
+2. python >= 3.6
+3. opencv-python >= 2.4.8
+4. scipy
+5. numpy
+6. matplotlib
 
 ## File Introduction
-* Folder:
-  * image —— It stores the frame data after the video has been converted to a frame
-  * models —— Pose-estimation pre-trained model ,if you want know more about it ,please click [here](https://github.com/marian-margeta/gait-recognition)
-  * models_pose —— another Pose-estimation pre-trained model,but trained data is different from 'models'
+* Folder(should create manually before running):
+  * ./image/frames_data/ —— Cache frame data after the video has been converted
+  * ./models/ —— Pose-estimation pre-trained models ,download them from [here](https://github.com/marian-margeta/gait-recognition/tree/master/models)
+  * ./models_pose/ —— Alternative Pose-estimation pre-trained model,download from [here](https://drive.google.com/file/d/1bNoZkuI0TCqf_DV613SOAng3p6Y0Si6a/view)
 
-* File
+* Core Files
   * video_to_pic.py —— convert videos data into frames data 
   * pose_estimation.py —— estimate the pose of people of frames data,and generate the pose-vector ,save pose-vector data as TFrecords files.
   * gait_model.py —— define the gait model:3D Resnet model , able to train  and validate
   * test_model.py —— test the model use test data
-  * other files
+  * other files are supportive
 
 ## How to use 
   1. run `python pose_estimation.py -h` to get the parameters information ,such as :
@@ -133,9 +141,4 @@ the correct example
    
    * ![](./temp/5.png)
 
-## Environment configuration
-1. Linux 
-2. tensorflow-gpu 1.10.0
-3. python 3.6
-4. opencv 2.4.8
-b
+
