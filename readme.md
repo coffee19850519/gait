@@ -6,7 +6,7 @@
  * @Description: In User Settings Edit
  * @FilePath: \mypapers\Access-Template\readme.md
  -->
-# How to use gait model
+# Gait Recognition
 
 ## Requistments
 1. tensorflow-gpu >= 1.10.0
